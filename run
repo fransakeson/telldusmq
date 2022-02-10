@@ -1,0 +1,6 @@
+docker run -d --name telldusmq --privileged \
+  -v /dev/bus/usb:/dev/bus/usb \
+  -v $PWD/tellstick/tellstick.conf:/etc/tellstick.conf:ro \
+  -v $PWD/tellstick/telldusmq.json:/etc/telldusmq/telldusmq.json:ro \
+  fransakeson/telldusmq:latest
+
